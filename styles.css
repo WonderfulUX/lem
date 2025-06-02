@@ -361,7 +361,7 @@ h1 {
 }
 
 #restaurant-banner {
-  background: linear-gradient(var(--text), var(--text-00)), no-repeat url(./assets/images/restaurant-banner.jpg);
+  background: linear-gradient(#000, var(--text-00)), no-repeat url(./assets/images/restaurant-banner.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -500,6 +500,7 @@ h1 {
   text-decoration: underline;
   text-underline-offset: 2px;
   font-size: 1.2em;
+  font-weight: 500;
 }
 
 .offer-block .conversion-btn,
@@ -719,7 +720,7 @@ h1 {
 .info-box-title {
   text-decoration: underline;
   text-underline-offset: 2px;
-  font-size: clamp(16px, 1.5vw, 28px);
+  font-size: clamp(16px, 1.5vw, 20px);
   color: var(--tertiary);
   opacity: 0.5;
   font-weight: 400;
@@ -837,7 +838,7 @@ input.contact-field-input {
   opacity: 0.7;
   font-weight: 300;
   font-family: mulish;
-  font-size: clamp(30px, 3vw, 100px);
+  font-size: clamp(24px, 3vw, 100px);
   margin-bottom: 20px;
   color: var(--primary);
 }
@@ -976,8 +977,8 @@ footer,
 .footer-left {
   column-gap: 10px;
   row-gap: 10px;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  height: fit-content;
 }
 
 .footer-right {
@@ -1388,6 +1389,17 @@ small {
     padding: 20px 0;
     border-top: 1px solid var(--primary-50);
   }
+  #mobile-nav-menu .nav-menu-item.active {
+    padding-left: 10px;
+  }
+  #mobile-nav-menu .nav-menu-item.active::after {
+    height: 24px;
+    width: 3px;
+    bottom: unset;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
   .nav-menu-item a {
     line-height: 45px;
     width: 100%;
@@ -1536,7 +1548,7 @@ small {
     width: 90%;
   }
   footer {
-    padding: clamp(30px, 8vw, 100px);
+    padding: clamp(30px, 8vw, 100px) clamp(30px, 8vw, 100px) 10px clamp(30px, 8vw, 100px);
     flex-direction: column-reverse;
     row-gap: 50px;
     background: linear-gradient(var(--primary-20), var(--primary-00));
@@ -1546,6 +1558,7 @@ small {
   }
   .footer-left {
     align-items: center;
+    flex-direction: column;
   }
   .header-scrolled {
     padding: 8px 16px;
@@ -1711,12 +1724,15 @@ small {
     width: 50%;
   }
   #home-banner h1 {
-    display: grid;
-    grid-template-rows: repeat(2, 13vw);
     align-items: center;
-    font-size: clamp(24px, 7vw, 100px);
+    font-size: clamp(24px, 6vw, 100px);
     line-height: 1;
     font-weight: 300;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .banner-btn-container a {
+    line-height: 40px;
   }
   .banner-btn-container {
     margin-top: 10px;
