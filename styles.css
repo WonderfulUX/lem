@@ -1414,6 +1414,7 @@ small {
     position: absolute;
     top: 15px;
     left: 30px;
+    width: 150px;
   }
   #mobile-menu-toggle {
     display: unset;
